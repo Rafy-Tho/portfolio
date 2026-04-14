@@ -1,5 +1,6 @@
-import { ArrowUpRight, Github } from "lucide-react";
-import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
+import { ArrowUpRight } from "lucide-react";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import Github from "../icon/Github";
 const projects = [
   {
     title: "Fintech Dashboard",

@@ -6,9 +6,10 @@ import {
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
-import { Button } from "@/components/Button";
+
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Button } from "../components/Button";
 
 const contactInfo = [
   {
@@ -55,7 +56,7 @@ export const Contact = () => {
 
       if (!serviceId || !templateId || !publicKey) {
         throw new Error(
-          "EmailJS configuration is missing. Please check your environment variables."
+          "EmailJS configuration is missing. Please check your environment variables.",
         );
       }
 
@@ -67,7 +68,7 @@ export const Contact = () => {
           email: formData.email,
           message: formData.message,
         },
-        publicKey
+        publicKey,
       );
 
       setSubmitStatus({
@@ -75,7 +76,7 @@ export const Contact = () => {
         message: "Message sent successfully! I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", message: "" });
-    } catch (err) {
+    } catch (error) {
       console.error("EmailJS error:", error);
       setSubmitStatus({
         type: "error",

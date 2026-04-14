@@ -1,13 +1,9 @@
-import { Button } from "@/components/Button";
-import {
-  ArrowRight,
-  ChevronDown,
-  Github,
-  Linkedin,
-  Twitter,
-  Download,
-} from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { Button } from "../components/Button";
+import Github from "../icon/Github";
+import Linkedin from "../icon/Linkedin";
+import Twitter from "../icon/Twitter";
 
 const skills = [
   "React",

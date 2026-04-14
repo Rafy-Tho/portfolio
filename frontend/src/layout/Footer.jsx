@@ -1,4 +1,7 @@
-import { Github, Linkedin, Twitter, Heart } from "lucide-react";
+import {  Heart } from "lucide-react";
+import Github from "../icon/Github";
+import Linkedin from "../icon/Linkedin";
+import Twitter from "../icon/Twitter";
 
 const socialLinks = [
   { icon: Github, href: "#", label: "GitHub" },
