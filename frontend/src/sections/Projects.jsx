@@ -1,42 +1,70 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import Github from "../icon/Github";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "Learning Management System",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+      "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
     image: "/projects/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+    tags: [
+      "React",
+      "JavaScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "NodeJS",
+      "PostgreSQL",
+    ],
+    link: "https://learning-online-platform-pern.onrender.com",
+    github: "https://github.com/Rafy-Tho/Learning_Online_Platform_Pern",
   },
   {
-    title: "E-Commerce Platform",
+    title: "Learning Management System",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
+    image: "/projects/project1.png",
+    tags: [
+      "React",
+      "JavaScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "NodeJS",
+      "PostgreSQL",
+    ],
+    link: "https://learning-online-platform-pern.onrender.com",
+    github: "https://github.com/Rafy-Tho/Learning_Online_Platform_Pern",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Learning Management System",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
+    image: "/projects/project1.png",
+    tags: [
+      "React",
+      "JavaScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "NodeJS",
+      "PostgreSQL",
+    ],
+    link: "https://learning-online-platform-pern.onrender.com",
+    github: "https://github.com/Rafy-Tho/Learning_Online_Platform_Pern",
   },
   {
-    title: "Project Management Tool",
+    title: "Learning Management System",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
+      "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
+    image: "/projects/project1.png",
+    tags: [
+      "React",
+      "JavaScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "NodeJS",
+      "PostgreSQL",
+    ],
+    link: "https://learning-online-platform-pern.onrender.com",
+    github: "https://github.com/Rafy-Tho/Learning_Online_Platform_Pern",
   },
 ];
 
@@ -74,7 +102,12 @@ export const Projects = () => {
               style={{ animationDelay: `${(idx + 1) * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative overflow-hidden aspect-video block"
+              >
                 <img
                   src={project.image}
                   alt={project.title}
@@ -85,35 +118,34 @@ export const Projects = () => {
                 bg-gradient-to-t from-card via-card/50
                  to-transparent opacity-60"
                 />
-                {/* Overlay Links */}
-                <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <a
-                    href={project.link}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <ArrowUpRight className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={project.github}
-                    className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
-                  >
-                    <Github className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
+              </a>
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                <div className="flex items-center justify-between flex-col sm:flex-row sm:items-center gap-5">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors ">
                     {project.title}
                   </h3>
-                  <ArrowUpRight
-                    className="w-5 h-5 
-                  text-muted-foreground group-hover:text-primary
-                   group-hover:translate-x-1 
-                   group-hover:-translate-y-1 transition-all"
-                  />
+                  <div className="flex gap-2 items-center">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-white transition-all"
+                      aria-label="View code"
+                    >
+                      <Github className="w-4 h-4" />
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-white transition-all  "
+                      aria-label="Live preview"
+                    >
+                      <ExternalLink className="w-6 h-6" />
+                    </a>
+                  </div>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   {project.description}
@@ -131,14 +163,6 @@ export const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
-          <AnimatedBorderButton>
-            View All Projects
-            <ArrowUpRight className="w-5 h-5" />
-          </AnimatedBorderButton>
         </div>
       </div>
     </section>

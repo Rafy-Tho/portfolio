@@ -1,12 +1,12 @@
-import { Button } from "../components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "../components/Link";
 
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  { href: "#what-i-focus", label: "Focus" },
 ];
 
 export const Navbar = () => {
@@ -34,7 +34,7 @@ export const Navbar = () => {
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+          Rafy<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
@@ -53,9 +53,10 @@ export const Navbar = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
-        </div>
+
+        <Link size="sm" href="#contact" className="hidden md:block">
+          Contact Me
+        </Link>
 
         {/* Mobile Menu Button */}
         <button
@@ -81,9 +82,9 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
+            <Link onClick={() => setIsMobileMenuOpen(false)} href="#contact">
               Contact Me
-            </Button>
+            </Link>
           </div>
         </div>
       )}

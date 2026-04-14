@@ -5,24 +5,25 @@ const highlights = [
     icon: Code2,
     title: "Clean Code",
     description:
-      "Writing maintainable, scalable code that stands the test of time.",
+      "Writing structured, readable code with a focus on scalability and best practices.",
   },
   {
     icon: Rocket,
-    title: "Performance",
+    title: "Real Projects",
     description:
-      "Optimizing for speed and delivering lightning-fast user experiences.",
+      "Building practical applications like quiz apps, expense trackers, and food ordering systems.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Working closely with teams to bring ideas to life.",
+    title: "User Experience",
+    description:
+      "Creating intuitive and interactive interfaces that are easy and enjoyable to use.",
   },
   {
     icon: Lightbulb,
-    title: "Innovation",
+    title: "Continuous Learning",
     description:
-      "Staying ahead with the latest technologies and best practices.",
+      "Always improving by exploring new tools, solving problems, and building better solutions.",
   },
 ];
 
@@ -40,39 +41,38 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Building the future,
+              Turning ideas into reality,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                one component at a time.
+                one project at a time.
               </span>
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I'm a passionate full stack developer who enjoys building modern
+                web applications from scratch. I started by learning how the web
+                works, and quickly moved into creating real-world projects like
+                quiz apps, expense trackers, and full food ordering systems.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I work mainly with JavaScript, React, and Node.js, along with
+                databases like PostgreSQL and MongoDB. I focus on building
+                clean, scalable, and interactive applications with tools like
+                Tailwind CSS, Redux, and TanStack Query.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                I'm constantly improving my skills by building projects,
+                exploring new technologies, and solving real problems. My goal
+                is to become an advanced developer who can create powerful and
+                user-friendly applications.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "I focus on building applications that are not only functional,
+                but clean, scalable, and enjoyable to use."
               </p>
             </div>
           </div>

@@ -1,29 +1,23 @@
 import { ArrowRight, ChevronDown, Download } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-import { Button } from "../components/Button";
+import { Link } from "../components/Link";
+import Facebook from "../icon/Facebook";
 import Github from "../icon/Github";
 import Linkedin from "../icon/Linkedin";
-import Twitter from "../icon/Twitter";
 
 const skills = [
+  "HTML",
+  "CSS",
   "React",
-  "Next.js",
-  "TypeScript",
+  "JavaScript",
   "Node.js",
-  "GraphQL",
   "PostgreSQL",
   "MongoDB",
-  "Redis",
-  "Docker",
-  "AWS",
-  "Vercel",
   "Tailwind CSS",
-  "Prisma",
-  "Jest",
-  "Cypress",
-  "Figma",
   "Git",
-  "GitHub Actions",
+  "GitHub",
+  "Redux",
+  "TanStack Query",
 ];
 
 export const Hero = () => {
@@ -39,24 +33,6 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
 
-      {/* Green Dots */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <div
-            className="absolute w-1.5 h-1.5 rounded-full opacity-60"
-            style={{
-              backgroundColor: "#20B2A6",
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${
-                15 + Math.random() * 20
-              }s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Content */}
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -65,33 +41,33 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Full Stack Developer
               </span>
             </div>
 
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Crafting <span className="text-primary glow-text">digital</span>
+                Building <span className="text-primary glow-text">modern</span>
                 <br />
-                experiences with
+                web applications with
                 <br />
                 <span className="font-serif italic font-normal text-white">
-                  precision.
+                  creativity & logic.
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Pedro Machado — a software engineer specializing in
-                React, Next.js, and TypeScript. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Rafy — a full stack developer working with React,
+                Node.js, PostgreSQL, and MongoDB. I build fast, scalable apps
+                with clean UI using Tailwind CSS, Redux, and modern JavaScript.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
+              <Link className="w-full md:w-auto" size="lg" href="#contact">
                 Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              </Link>
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
@@ -102,13 +78,20 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                { icon: Github, href: "#" },
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
+                { icon: Github, href: "https://github.com/Rafy-Tho" },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/rafy-tho-bb874a347/",
+                },
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/share/1DnJjG83aQ/",
+                },
               ].map((social, idx) => (
                 <a
                   key={idx}
                   href={social.href}
+                  target="_blank"
                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   {<social.icon className="w-5 h-5" />}
@@ -130,7 +113,7 @@ export const Hero = () => {
                 <img
                   src="/profile-photo.jpg"
                   alt="Pedro Machado"
-                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl "
                 />
 
                 {/* Floating Badge */}
@@ -138,15 +121,15 @@ export const Hero = () => {
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                     <span className="text-sm font-medium">
-                      Available for work
+                      Open to opportunities
                     </span>
                   </div>
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-2xl font-bold text-primary">2+</div>
                   <div className="text-xs text-muted-foreground">
-                    Years Exp.
+                    Projects Built
                   </div>
                 </div>
               </div>

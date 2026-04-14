@@ -1,39 +1,48 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "2024",
+    role: "Web Development Fundamentals",
+    company: "Learning Phase",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Started learning the basics of web development, including HTML, CSS, and JavaScript, and built simple static websites.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    current: false,
+  },
+  {
+    period: "2024 — 2025",
+    role: "JavaScript & DOM",
+    company: "Practice & Projects",
+    description:
+      "Strengthened JavaScript fundamentals, worked with DOM manipulation, and built interactive projects to improve problem-solving skills.",
+    technologies: ["JavaScript", "DOM", "Git", "GitHub"],
+    current: false,
+  },
+  {
+    period: "2025",
+    role: "Frontend Development",
+    company: "Project-Based Learning",
+    description:
+      "Built dynamic and responsive user interfaces using modern tools and frameworks, focusing on user experience and clean design.",
+    technologies: ["React", "Tailwind CSS", "Redux"],
+    current: false,
+  },
+  {
+    period: "2025 — 2026",
+    role: "Backend & Databases",
+    company: "Full Stack Learning",
+    description:
+      "Learned backend development with Node.js and PHP, and worked with databases like PostgreSQL and MongoDB to handle data and APIs.",
+    technologies: ["Node.js", "Express.js", "PostgreSQL", "MongoDB"],
+    current: false,
+  },
+  {
+    period: "2026 — Present",
+    role: "Full Stack Projects",
+    company: "Real-World Applications",
+    description:
+      "Building full stack applications such as food ordering systems with authentication, cart functionality, and database integration.",
+    technologies: ["React", "Node.js", "PostgreSQL", "JavaScript"],
     current: true,
-  },
-  {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
-    description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
-  },
-  {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
-    description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
-  },
-  {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
-    description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
-    current: false,
   },
 ];
 
@@ -62,7 +71,7 @@ export const Experience = () => {
             Experience that{" "}
             <span className="font-serif italic font-normal text-white">
               {" "}
-              speaks volumes.
+              showcase my growth.
             </span>
           </h2>
 
@@ -70,8 +79,9 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A journey of my growth as a developer, from learning the
+            fundamentals to building real-world full stack applications and
+            continuously improving my skills.
           </p>
         </div>
 
