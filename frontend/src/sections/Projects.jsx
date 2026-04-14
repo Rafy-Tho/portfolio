@@ -1,12 +1,12 @@
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { ExternalLink } from "lucide-react";
 import Github from "../icon/Github";
+import { project1 } from "../assets";
 const projects = [
   {
     title: "Learning Management System",
     description:
       "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
-    image: "/projects/project1.png",
+    image: project1,
     tags: [
       "React",
       "JavaScript",
@@ -22,7 +22,7 @@ const projects = [
     title: "Learning Management System",
     description:
       "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
-    image: "/projects/project1.png",
+    image: project1,
     tags: [
       "React",
       "JavaScript",
@@ -38,7 +38,7 @@ const projects = [
     title: "Learning Management System",
     description:
       "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
-    image: "/projects/project1.png",
+    image: project1,
     tags: [
       "React",
       "JavaScript",
@@ -54,7 +54,7 @@ const projects = [
     title: "Learning Management System",
     description:
       "A Learning Management System built to manage courses, track student progress, and provide a structured learning experience with a user-friendly interface.",
-    image: "/projects/project1.png",
+    image: project1,
     tags: [
       "React",
       "JavaScript",
