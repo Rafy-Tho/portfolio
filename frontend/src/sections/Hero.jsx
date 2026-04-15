@@ -1,5 +1,5 @@
-import { ArrowRight, ChevronDown, Download } from "lucide-react";
-import { hero, profile } from "../assets";
+import { ArrowRight, ChevronDown, Download, View } from "lucide-react";
+import { hero, profile, resume } from "../assets";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 import { Link } from "../components/Link";
 import Facebook from "../icon/Facebook";
@@ -66,12 +66,17 @@ export const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Link className="w-full md:w-auto" size="lg" href="#contact">
-                Contact Me <ArrowRight className="w-5 h-5" />
+              <Link
+                href={resume}
+                target="_blank"
+                className="w-full md:w-auto"
+                size="lg"
+              >
+                <View className="w-5 h-5" /> Resume
               </Link>
-              <AnimatedBorderButton>
+              <AnimatedBorderButton href={resume} download>
                 <Download className="w-5 h-5" />
-                Download CV
+                Resume
               </AnimatedBorderButton>
             </div>
 
