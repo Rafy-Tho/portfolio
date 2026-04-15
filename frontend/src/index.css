@@ -1,28 +1,30 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+  --color-background: #f0f4f8;
+  --color-foreground: #0f172a;
 
-  --color-card: #141a1f;
+  --color-card: ##5b6e8c;
+  --color-card-foreground: #0f172a;
 
-  --color-primary: #20b2a6;
-  --color-primary-foreground: #ffffff;
+  --color-primary: #2563eb;
+  --color-primary-foreground: #f8fafc;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  --color-secondary: #e6edf4;
+  --color-secondary-foreground: #1d4ed8;
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  --color-muted: #eef2f6;
+  --color-muted-foreground: #5b6e8c;
 
-  --color-border: #242b32;
+  --color-border: #dce3ec;
 
   --radius: 0.75rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-highlight: #0ea5e9;
+  --color-surface: #eef3fa;
 }
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -30,6 +32,27 @@
 
   button {
     cursor: pointer;
+  }
+
+  .dark {
+    --color-background: #0f172a;
+    --color-foreground: #f1f5f9;
+
+    --color-card: #1e293b;
+
+    --color-primary: #3b82f6;
+    --color-primary-foreground: #ffffff;
+
+    --color-secondary: #334155;
+    --color-secondary-foreground: #93c5fd;
+
+    --color-muted: #1e293b;
+    --color-muted-foreground: #94a3b8;
+
+    --color-border: #334155;
+
+    --color-highlight: #38bdf8;
+    --color-surface: #1e293b;
   }
 
   body {
@@ -171,9 +194,10 @@
   }
 
   .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
     backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
+    box-shadow: 0 0 20px
+      color-mix(in srgb, var(--color-primary) 20%, transparent);
   }
 
   .timeline-glow {

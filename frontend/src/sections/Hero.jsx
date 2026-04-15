@@ -53,7 +53,7 @@ export const Hero = () => {
                 <br />
                 web applications with
                 <br />
-                <span className="font-serif italic font-normal text-white">
+                <span className="font-serif italic font-normal text-slate-900 dark:text-white">
                   creativity & logic.
                 </span>
               </h1>

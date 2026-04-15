@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "../components/Link";
+import { ThemeToggle } from "../components/ThemeToggle";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -52,19 +53,22 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
+          <Link size="sm" href="#contact">
+            Contact Me
+          </Link>
+        </div>
 
-        <Link size="sm" href="#contact" className="hidden md:block">
-          Contact Me
-        </Link>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 text-foreground cursor-pointer"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}

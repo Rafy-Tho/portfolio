@@ -102,7 +102,7 @@ export const Contact = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Let’s work{" "}
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-slate-900 dark:text-white">
               together.
             </span>
           </h2>

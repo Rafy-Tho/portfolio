@@ -82,7 +82,7 @@ export const Projects = () => {
           </span>
           <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Projects that
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-slate-900 dark:text-white">
               {" "}
               make an impact.
             </span>
@@ -131,7 +131,7 @@ export const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-white transition-all"
+                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-primary-foreground transition-all"
                       aria-label="View code"
                     >
                       <Github className="w-4 h-4" />
@@ -140,7 +140,7 @@ export const Projects = () => {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-white transition-all  "
+                      className="p-2 rounded-full bg-surface hover:bg-primary hover:text-primary-foreground transition-all  "
                       aria-label="Live preview"
                     >
                       <ExternalLink className="w-6 h-6" />

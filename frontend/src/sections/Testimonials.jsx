@@ -76,7 +76,7 @@ export const Testimonials = () => {
             What I've Built &{" "}
             <span
               className="font-serif italic 
-            font-normal text-white"
+            font-normal text-slate-900 dark:text-white"
             >
               learned along the way.
             </span>
